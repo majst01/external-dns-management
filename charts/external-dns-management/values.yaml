@@ -140,6 +140,11 @@ configuration:
   # compoundRatelimiterBurst:
   # compoundRatelimiterEnabled:
   # compoundRatelimiterQps:
+  # compoundRemoteAdvancedBatchSize:
+  # compoundRemoteAdvancedMaxRetries:
+  # compoundRemoteRatelimiterBurst:
+  # compoundRemoteRatelimiterEnabled:
+  # compoundRemoteRatelimiterQps:
   # compoundRescheduleDelay: 120s
   # compoundSecretsPoolSize: 2
   # compoundSetup: 10
@@ -171,6 +176,7 @@ configuration:
   # dnsentrySourceTargetNamePrefix: ""
   # dnsentrySourceTargetNamespace: ""
   # dnsentrySourceTargetOwnerId: ""
+  # dnsentrySourceTargetOwnerObject:
   # dnsentrySourceTargetRealms: ""
   # dnsentrySourceTargetSetIgnoreOwners: false
   # dnsentrySourceTargetsPoolSize: 2
@@ -212,6 +218,7 @@ configuration:
   # ingressDNSTargetNamePrefix: ""
   # ingressDNSTargetNamespace: ""
   # ingressDNSTargetOwnerId: ""
+  # ingressDNSTargetOwnerObject:
   # ingressDNSTargetRealms: ""
   # ingressDNSTargetSetIgnoreOwners: false
   # ingressDNSTargetsPoolSize: 2
@@ -255,6 +262,11 @@ configuration:
   # ratelimiterBurst:
   # ratelimiterEnabled:
   # ratelimiterQps:
+  # remoteAdvancedBatchSize:
+  # remoteAdvancedMaxRetries:
+  # remoteRatelimiterBurst:
+  # remoteRatelimiterEnabled:
+  # remoteRatelimiterQps:
   # rescheduleDelay: 120s
   # secretsPoolSize:
   serverPortHttp: 8080
@@ -271,6 +283,7 @@ configuration:
   # serviceDNSTargetNamePrefix: ""
   # serviceDNSTargetNamespace: ""
   # serviceDNSTargetOwnerId: ""
+  # serviceDNSTargetOwnerObject:
   # serviceDNSTargetRealms: ""
   # serviceDNSTargetSetIgnoreOwners: false
   # serviceDNSTargetsPoolSize: 2
@@ -282,6 +295,7 @@ configuration:
   # targetNamePrefix: ""
   # targetNamespace: ""
   # targetOwnerId: ""
+  # targetOwnerObject:
   # targetRealms: ""
   # targetSetIgnoreOwners: false
   # targetDisableDeployCrds: false
@@ -316,3 +330,16 @@ custom: {}
 #  volumeMounts:
 #    - name: token
 #      mountPath: /token
+
+remoteaccess:
+#  service:
+#    annotations:
+#      dns.gardener.cloud/class: garden
+#      dns.gardener.cloud/dnsnames: my.foo.bar.com
+#    type: LoadBalancer
+  enabled: false
+#  certs:
+#    cacert: LS0t...
+#    servercert: LS0t...
+#    serverkey: LS0t...
+#  port: 7777
